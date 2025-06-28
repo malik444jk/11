@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junaid Ali | Personal Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-image: url('https://images.unsplash.com/photo-1607082349566-187342b7f3d5'); /* Sigma style background */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #f1f1f1;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      text-align: center;
+    }
+    nav button {
+      background: linear-gradient(145deg, #1f1c2c, #928dab);
+      border: none;
+      color: #fff;
+      padding: 12px 24px;
+      margin: 0 10px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    nav button:hover {
+      background: linear-gradient(145deg, #928dab, #1f1c2c);
+    }
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    h1, h2, p {
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    #about, #contact {
+      background-image: url('https://images.unsplash.com/photo-1611262588024-50f82b374c7e');
+      background-size: cover;
+      background-position: center;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <button onclick="showSection('about')">About Me</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <div id="about" class="section">
+    <h1 style="font-size: 48px; font-weight: 600;">Junaid Ali</h1>
+    <h2 style="font-size: 30px; font-weight: 400;">Class: 9th</h2>
+    <p style="font-size: 22px;">Subject: Computer Science</p>
+    <p style="font-size: 20px; margin-top: 30px; font-style: italic;">Practicing of Coding</p>
+  </div>
+
+  <div id="contact" class="section hidden">
+    <h2 style="font-size: 30px;">Contact Me</h2>
+    <p style="font-size: 20px;">TikTok ID: junaidking</p>
+    <p style="font-size: 20px;">Email: iamjunaidali1243@gmail.com</p>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('about').classList.add('hidden');
+      document.getElementById('contact').classList.add('hidden');
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
